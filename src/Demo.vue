@@ -46,17 +46,17 @@ export default {
       scale: 1,
       rotate: 0,
       pointX: 0,
-      pointY: 0,
+      pointY: 0
     };
   },
   computed: {
-    boxStyle: function () {
+    boxStyle: function() {
       return `height:${this.height}px;`;
     },
-    coverStyle: function () {
+    coverStyle: function() {
       return `height:${this.height}px;transform:rotate(${this.rotate}deg) scale(${this.scale});overflow:hidden;`;
     },
-    coverImgStyle: function () {
+    coverImgStyle: function() {
       if (
         this.height &&
         this.$refs.cover.naturalHeight > this.$refs.cover.naturalWidth
@@ -65,7 +65,7 @@ export default {
         return `width:auto;height:${this.height}px;transform: translate(-50%,-50%);`;
       }
       return `width:12rem;height:auto;transform: translate(-50%,-50%);`;
-    },
+    }
   },
   mounted() {
     // console.log(html2canvas)
@@ -88,10 +88,10 @@ export default {
         width: realHtml.offsetWidth, //dom 原始宽度
         height: realHtml.offsetHeight, //dom 原始高度
         x: realHtml.offsetLeft + realHtml.offsetParent.offsetLeft,
-        y: realHtml.offsetTop + realHtml.offsetParent.offsetTop,
+        y: realHtml.offsetTop + realHtml.offsetParent.offsetTop
       };
 
-      html2canvas(realHtml, opts).then(function (canvas) {
+      html2canvas(realHtml, opts).then(function(canvas) {
         var imgUrl = canvas
           .toDataURL("image/" + ".jpg")
           .replace("image/" + ".jpg", "image/octet-stream");
@@ -249,8 +249,8 @@ export default {
     // },
     clickCoverImg() {
       console.log(123);
-    },
-  },
+    }
+  }
 };
 </script>
 <style scoped>

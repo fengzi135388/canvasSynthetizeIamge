@@ -6,7 +6,12 @@ import router from './router'
 import store from './store'
 import './assets/css/base.css'
 import { NavBar } from 'vant'
+import AlloyFinger from 'alloyfinger'
+import AlloyFingerPlugin from 'alloyfinger/vue/alloy_finger_vue'
 Vue.use(NavBar)
+Vue.use(AlloyFingerPlugin, {
+  AlloyFinger
+})
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
